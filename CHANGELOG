@@ -1,6 +1,8 @@
 Adafruit's Arduino NINA-W102 firmware 1.7.5 - 2023.07.21
 
 * Fixed Adafruit IO Root SSL Certificate
+* Updated build environment to ESP-IDF 4.4.0
+* Fixed support for joining WPA2 Enterprise networks, testing on eduroam
 
 Adafruit's Arduino NINA-W102 firmware 1.7.4 - 2021.06.03
 

@@ -1,3 +1,5 @@
+# LEGACY MAKEFILE - not used in v2.0.0alpha or newer
+
 PROJECT_NAME := nina-fw
 
 # Passthrough Board Port
