@@ -3,7 +3,7 @@
 import sys;
 
 booloaderData = open("build/bootloader/bootloader.bin", "rb").read()
-partitionData = open("build/partitions.bin", "rb").read()
+partitionData = open("build/partition_table/partition-table.bin", "rb").read()
 appData = open("build/nina-fw.bin", "rb").read()
 certsData = open("data/roots.pem", "rb").read()
 
