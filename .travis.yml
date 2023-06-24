@@ -18,8 +18,8 @@ before_install:
 install:
   - mkdir -p ~/esp
   - cd ~/esp
-  # Get ESP-IDF release/v4.4
-  - git clone --branch release/v4.4 --recursive https://github.com/espressif/esp-idf.git
+  # Get ESP-IDF v4.4.5
+  - git clone --branch v4.4.5 --recursive https://github.com/espressif/esp-idf.git
   # Set up IDF
   - cd esp-idf
   - ./install.sh esp32
