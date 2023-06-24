@@ -27,8 +27,8 @@ original Arduino firmware repository.
 
 1. [Download the ESP32 toolchain](https://docs.espressif.com/projects/esp-idf/en/v3.3.1/get-started/index.html#setup-toolchain)
 1. Extract it and add it to your `PATH`: `export PATH=$PATH:<path/to/toolchain>/bin`
-1. Clone **release/v4.4** of the IDF: `git clone --branch release/v4.4 --recursive https://github.com/espressif/esp-idf.git`
-1. In the IDF folder, run `. ./install.sh`, then 
+1. Clone **v4.4.5** of the IDF: `git clone --branch v4.4.5 --recursive https://github.com/espressif/esp-idf.git`
+1. In the IDF folder, run `./install.sh`, then `. ./export.sh`
 1. Run `idf.py build` to build the binary (in the directory of this read me)
 1. Run `python combine.py` to create a binary that can be burned at 0x0000
 1. You should have a file named `NINA_W102-x.x.x.bin` in the top directory
