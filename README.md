@@ -25,7 +25,7 @@ The NINA firmware version needs to be updated in four places in this repo:
 These instructions may differ from the instructions included in the
 original Arduino firmware repository.
 
-1. [Download the ESP32 toolchain](https://docs.espressif.com/projects/esp-idf/en/v3.3.1/get-started/index.html#setup-toolchain)
+1. [Download the ESP32 toolchain](https://docs.espressif.com/projects/esp-idf/en/v4.4.5/esp32/get-started/index.html#setup-toolchain)
 1. Extract it and add it to your `PATH`: `export PATH=$PATH:<path/to/toolchain>/bin`
 1. Clone **v4.4.5** of the IDF: `git clone --branch v4.4.5 --recursive https://github.com/espressif/esp-idf.git`
 1. In the IDF folder, run `./install.sh`, then `. ./export.sh`
