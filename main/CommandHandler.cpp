@@ -29,7 +29,7 @@
 
 #include "Arduino.h"
 
-const char FIRMWARE_VERSION[11] = "2.0.0alpha";
+const char FIRMWARE_VERSION[] = "2.0.0alpha";
 
 // Optional, user-defined X.509 certificate
 char CERT_BUF[1300];
@@ -758,7 +758,7 @@ int getFwVersion(const uint8_t command[], uint8_t response[])
 
   memcpy(&response[4], FIRMWARE_VERSION, sizeof(FIRMWARE_VERSION));
 
-  return 11;
+  return 4 + sizeof(FIRMWARE_VERSION) + 1;
 }
 
 int sendUDPdata(const uint8_t command[], uint8_t response[])

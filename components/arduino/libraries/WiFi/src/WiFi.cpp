@@ -20,7 +20,6 @@
 #include <time.h>
 
 #include <esp_wifi.h>
-//#include <tcpip_adapter.h>
 #include <esp_netif.h>
 
 #include <lwip/apps/sntp.h>
@@ -606,7 +605,6 @@ void WiFiClass::handleSystemEvent(system_event_t* event)
 
       esp_wifi_get_mac(WIFI_IF_STA, mac);
       sprintf(defaultHostname, "arduino-%.2x%.2x", mac[4], mac[5]);
-      //tcpip_adapter_set_hostname(TCPIP_ADAPTER_IF_STA, defaultHostname);
       if (strlen(_hostname) == 0) {
         sprintf(_hostname, "%s", defaultHostname);
       }

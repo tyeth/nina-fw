@@ -34,8 +34,6 @@ extern "C" {
 
 #define SPI_BUFFER_LEN SPI_MAX_DMA_LEN
 
-extern "C" void app_main(void);
-
 int debug = 0;
 
 uint8_t* commandBuffer;
