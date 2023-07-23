@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 gperf
+
+      - name: Set up ESP-IDF
+        run: |
+          mkdir -p ~/esp
+          cd ~/esp
+          git clone --recursive --branch v4.4.5 --depth 1 https://github.com/espressif/esp-idf.git
+          cd esp-idf
+          ./install.sh esp32
+          . ./export.sh
+
+      - name: Build
+        run: |
+          cd ${{ github.workspace }}
+          idf.py build
+
+      - name: Combine binaries
+        run: |
+          cd ${{ github.workspace }}
+          python combine.py
+
+      - name: Deploy
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./NINA_W102-*.bin
+          asset_name: NINA_W102-$(date +'%Y-%m-%d-%H-%M-%S').bin
+          asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
