@@ -29,6 +29,7 @@ jobs:
       - name: Build
         run: |
           cd ${{ github.workspace }}
+          . ~/esp/esp-idf/export.sh
           idf.py build
 
       - name: Combine binaries
