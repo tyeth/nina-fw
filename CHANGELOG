@@ -1,5 +1,9 @@
 Adafruit's Arduino NINA-W102 firmware 1.7.5 - 2023.07.21
 
+* Fix for bug in NINA-W102 firmware 1.7.5 not allowing uploads on Windows/Linux
+
+Adafruit's Arduino NINA-W102 firmware 1.7.5 - 2023.07.21
+
 * Fixed Adafruit IO Root SSL Certificate
 
 Adafruit's Arduino NINA-W102 firmware 1.7.4 - 2021.06.03
